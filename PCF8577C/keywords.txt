@@ -1,0 +1,22 @@
+#######################################
+# Syntax Coloring Map For PCF8577C
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+PCF8577C		KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin			KEYWORD2
+selectBank		KEYWORD2
+write			KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+DIRECT_DRIVE	LITERAL1
+DUPLEX_DRIVE	LITERAL1
