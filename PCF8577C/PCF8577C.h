@@ -4,9 +4,6 @@
 #include <Arduino.h>
 #include <Wire.h>
 
-extern TwoWire Wire;
-
-/* arduino class */
 class PCF8577C {
     public:
         static const uint8_t DIRECT_DRIVE = 0x0;
