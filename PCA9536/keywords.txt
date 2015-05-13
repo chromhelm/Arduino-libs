@@ -1,0 +1,24 @@
+#######################################
+# Syntax Coloring Map For PCA9536
+####################################### 
+# Datatypes (KEYWORD1)
+#######################################
+
+PCA9536 			KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+begin				KEYWORD2
+setPinsAsInput		KEYWORD2
+getPinsAsInput		KEYWORD2
+setPinsPolarity		KEYWORD2
+getPinsPolarity		KEYWORD2
+read				KEYWORD2
+readBuffer			KEYWORD2
+write				KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
