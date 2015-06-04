@@ -1,6 +1,6 @@
 #include "HexWriter.h"
 
-const uint8_t HexWriter::c[16] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F',};
+const uint8_t HexWriter::c[16] PROGMEM = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F',};
 
 void HexWriter::begin(Print* print,  mode_t mode)
 {
@@ -45,7 +45,7 @@ void HexWriter::printLine(uint8_t* data, uint16_t pos, uint16_t offset, uint16_t
 	
 	while(i < 8  && (pos + i < endOfData || mode.showText))
 	{
-		if(pos + i < offset || pos + i >= endOfData) p->print("  ");
+		if(pos + i < offset || pos + i >= endOfData) p->print(F("  "));
 		else print(data[pos + i], 2);
 		if(i < 7)p->write(' ');
 		i++;
@@ -58,7 +58,7 @@ void HexWriter::printLine(uint8_t* data, uint16_t pos, uint16_t offset, uint16_t
 		
 		while(i < 16  && (pos + i < endOfData || mode.showText))
 		{
-			if(pos + i < offset || pos + i >= endOfData)p->print("  ");
+			if(pos + i < offset || pos + i >= endOfData)p->print(F("  "));
 			else print(data[pos + i], 2);
 			if(i < 15)p->write(' ');
 			i++;
@@ -68,7 +68,7 @@ void HexWriter::printLine(uint8_t* data, uint16_t pos, uint16_t offset, uint16_t
 	if(mode.showText)
 	{
 		i = 0;
-		p->print("| ");
+		p->print(F("| "));
 		
 		while(i < 8 && pos + i < endOfData)
 		{
@@ -94,6 +94,7 @@ void HexWriter::printLine(uint8_t* data, uint16_t pos, uint16_t offset, uint16_t
 void HexWriter::printHeader(uint8_t offsetLength)
 {
 	uint8_t i = 0;
+	
 
 	if(mode.showOffset)
 	{
@@ -104,19 +105,19 @@ void HexWriter::printHeader(uint8_t offsetLength)
 		p->write('|');
 	}
 	
-	p->print(" 0  1  2  3  4  5  6  7");
+	p->print(F(" 0  1  2  3  4  5  6  7"));
 	
 	if(mode.show16bit)
 	{
-		p->print(": 8  9  A  B  C  D  E  F");
+		p->print(F(": 8  9  A  B  C  D  E  F"));
 	}
 	
 	if(mode.showText)
 	{
-		p->print("| 01234567");
+		p->print(F("| 01234567"));
 		if(mode.show16bit)
 		{
-			p->print(" 89ABCDEF");
+			p->print(F(" 89ABCDEF"));
 		}
 	}
 	
@@ -131,18 +132,18 @@ void HexWriter::printHeader(uint8_t offsetLength)
 		}
 		p->write('+');
 	}
-	p->print("-----------------------");
+	p->print(F("-----------------------"));
 	if(mode.show16bit)
 	{
-		p->print("+-----------------------");
+		p->print(F("+-----------------------"));
 	}
 	
 	if(mode.showText)
 	{
-		p->print("+---------");
+		p->print(F("+---------"));
 		if(mode.show16bit)
 		{
-			p->print("---------");
+			p->print(F("---------"));
 		}
 	}
 	p->println();

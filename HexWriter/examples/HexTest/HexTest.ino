@@ -97,14 +97,14 @@ void test1()
 
 void writeHex(uint8_t offset, uint8_t length)
 {
-	Serial.println("==================================");
-	Serial.print("Offset = ");
+	Serial.println(F("=================================="));
+	Serial.print(F("Offset = "));
 	Serial.print(offset);
-	Serial.print("   Length = ");
+	Serial.print(F("   Length = "));
 	Serial.println(length);
-	Serial.println("==================================");
+	Serial.println(F("=================================="));
 	
-	Serial.println("null");
+	Serial.println(F("null"));
 	hex.mode.showHeader = 0;
 	hex.mode.showOffset = 0;
 	hex.mode.show16bit = 0;
@@ -112,7 +112,7 @@ void writeHex(uint8_t offset, uint8_t length)
 	hex.print(data, offset, length);
 	delay(1);
 
-	Serial.println("Header");
+	Serial.println(F("Header"));
 	hex.mode.showHeader = 1;
 	hex.mode.showOffset = 0;
 	hex.mode.show16bit = 0;
@@ -120,7 +120,7 @@ void writeHex(uint8_t offset, uint8_t length)
 	hex.print(data, offset, length);
 	delay(1);
 
-	Serial.println("Offset");
+	Serial.println(F("Offset"));
 	hex.mode.showHeader = 0;
 	hex.mode.showOffset = 1;
 	hex.mode.show16bit = 0;
@@ -128,7 +128,7 @@ void writeHex(uint8_t offset, uint8_t length)
 	hex.print(data, offset, length);
 	delay(1);
 
-	Serial.println("Header + offset");
+	Serial.println(F("Header + offset"));
 	hex.mode.showHeader = 1;
 	hex.mode.showOffset = 1;
 	hex.mode.show16bit = 0;
@@ -136,7 +136,7 @@ void writeHex(uint8_t offset, uint8_t length)
 	hex.print(data, offset, length);
 	delay(1);
 
-	Serial.println("16 bit");
+	Serial.println(F("16 bit"));
 	hex.mode.showHeader = 0;
 	hex.mode.showOffset = 0;
 	hex.mode.show16bit = 1;
@@ -144,7 +144,7 @@ void writeHex(uint8_t offset, uint8_t length)
 	hex.print(data, offset, length);
 	delay(1);
 
-	Serial.println("Header + 16 bit");
+	Serial.println(F("Header + 16 bit"));
 	hex.mode.showHeader = 1;
 	hex.mode.showOffset = 0;
 	hex.mode.show16bit = 1;
@@ -152,7 +152,7 @@ void writeHex(uint8_t offset, uint8_t length)
 	hex.print(data, offset, length);
 	delay(1);
 
-	Serial.println("Offset + 16 bit");
+	Serial.println(F("Offset + 16 bit"));
 	hex.mode.showHeader = 0;
 	hex.mode.showOffset = 1;
 	hex.mode.show16bit = 1;
@@ -160,63 +160,63 @@ void writeHex(uint8_t offset, uint8_t length)
 	hex.print(data, offset, length);
 	delay(1);
 
-	Serial.println("Header + Offset + 16 bit");
+	Serial.println(F("Header + Offset + 16 bit"));
 	hex.mode.showHeader = 1;
 	hex.mode.showOffset = 1;
 	hex.mode.show16bit = 1;
 	hex.mode.showText = 0;
 	hex.print(data, offset, length);
 	//--------------------------
-	Serial.println("Text");
+	Serial.println(F("Text"));
 	hex.mode.showHeader = 0;
 	hex.mode.showOffset = 0;
 	hex.mode.show16bit = 0;
 	hex.mode.showText = 1;
 	hex.print(data, offset, length);
 	//--------------------------
-	Serial.println("Header + Text");
+	Serial.println(F("Header + Text"));
 	hex.mode.showHeader = 1;
 	hex.mode.showOffset = 0;
 	hex.mode.show16bit = 0;
 	hex.mode.showText = 1;
 	hex.print(data, offset, length);
 	//--------------------------
-	Serial.println("Offset + Text");
+	Serial.println(F("Offset + Text"));
 	hex.mode.showHeader = 0;
 	hex.mode.showOffset = 1;
 	hex.mode.show16bit = 0;
 	hex.mode.showText = 1;
 	hex.print(data, offset, length);
 	//--------------------------
-	Serial.println("Header + offset + Text");
+	Serial.println(F("Header + offset + Text"));
 	hex.mode.showHeader = 1;
 	hex.mode.showOffset = 1;
 	hex.mode.show16bit = 0;
 	hex.mode.showText = 1;
 	hex.print(data, offset, length);
 	//--------------------------
-	Serial.println("16 bit + Text");
+	Serial.println(F("16 bit + Text"));
 	hex.mode.showHeader = 0;
 	hex.mode.showOffset = 0;
 	hex.mode.show16bit = 1;
 	hex.mode.showText = 1;
 	hex.print(data, offset, length);
 	//--------------------------
-	Serial.println("Header + 16 bit + Text");
+	Serial.println(F("Header + 16 bit + Text"));
 	hex.mode.showHeader = 1;
 	hex.mode.showOffset = 0;
 	hex.mode.show16bit = 1;
 	hex.mode.showText = 1;
 	hex.print(data, offset, length);
 	//--------------------------
-	Serial.println("Offset + 16 bit + Text");
+	Serial.println(F("Offset + 16 bit + Text"));
 	hex.mode.showHeader = 0;
 	hex.mode.showOffset = 1;
 	hex.mode.show16bit = 1;
 	hex.mode.showText = 1;
 	hex.print(data, offset, length);
 	//--------------------------
-	Serial.println("Header + Offset + 16 bit + Text");
+	Serial.println(F("Header + Offset + 16 bit + Text"));
 	hex.mode.showHeader = 1;
 	hex.mode.showOffset = 1;
 	hex.mode.show16bit = 1;
