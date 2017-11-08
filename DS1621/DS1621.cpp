@@ -8,7 +8,8 @@ void DS1621::begin(byte addr)
     Wire.beginTransmission(this->address);              // connect to DS1621 (#0)
     Wire.write(0xAC);                                   // Access Config
     Wire.write(0x02);                                   // set for continuous conversion
-    Wire.beginTransmission(this->address);              // restart
+    Wire.endTransmission();
+    Wire.beginTransmission(this->address);
     Wire.write(0xEE);                                   // start conversions
     Wire.endTransmission();
 }
