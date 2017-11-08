@@ -20,17 +20,12 @@ void HYB_HPSD3000::begin(int16_t maxPressure, bool biderectional)
 void HYB_HPSD3000::getRawData(uint8_t* data)
 {
   int8_t counter = 0;
-  int16_t pressure, temperatur;
   
-  Wire.beginTransmission(I2C_ADDRESS); // transmit to device)
-  Wire.endTransmission();     // stop transmitting
-  
-  Wire.requestFrom(I2C_ADDRESS, 4);    // request 4 bytes from slave device
-  counter = 0;
-  while(Wire.available())    // slave may send less than requested
+  Wire.requestFrom(I2C_ADDRESS, 4);	// request 4 bytes from slave device
+
+  while(Wire.available())    		// slave may send less than requested
   {
     data[counter] = Wire.read();
-    delayMicroseconds(2);
     counter++;
   }
 }
