@@ -10,14 +10,14 @@ HexWriter	KEYWORD1
 # Methods and Functions (KEYWORD2)
 #######################################
 
-begin		KEYWORD2
-print		KEYWORD2
+begin	KEYWORD2
+print	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
 #######################################
-mode_t		LITERAL1
+mode_t	LITERAL1
 #######################################
 #  (LITERAL2)
 #######################################
-mode		LITERAL2
+mode	LITERAL2
