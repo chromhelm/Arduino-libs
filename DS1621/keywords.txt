@@ -4,14 +4,14 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-DS1621			KEYWORD1
+DS1621	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-begin			KEYWORD2
-getTemp			KEYWORD2
+begin	KEYWORD2
+getTemp	KEYWORD2
 #######################################
 # Constants (LITERAL1)
 #######################################

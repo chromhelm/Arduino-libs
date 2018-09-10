@@ -4,20 +4,20 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-HYB_HPSD3000		KEYWORD1
+HYB_HPSD3000	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-begin				KEYWORD2
-getTemp				KEYWORD2
-getTempf			KEYWORD2
-getPressure 		KEYWORD2
-getPressuref		KEYWORD2
+begin	KEYWORD2
+getTemp	KEYWORD2
+getTempf	KEYWORD2
+getPressure	KEYWORD2
+getPressuref	KEYWORD2
 setTempCorrection	KEYWORD2
 setPressCorrection	KEYWORD2
-getRawData			KEYWORD2
+getRawData	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)

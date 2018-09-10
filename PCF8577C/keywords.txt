@@ -4,15 +4,15 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-PCF8577C		KEYWORD1
+PCF8577C	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
 #######################################
 
-begin			KEYWORD2
-selectBank		KEYWORD2
-write			KEYWORD2
+begin	KEYWORD2
+selectBank	KEYWORD2
+write	KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
